@@ -1,13 +1,14 @@
-import TableAll from "./components/Table/TableAll";
-import Players from "./components/Players/Players";
-import Buttons from "./components/FooterButtons/Buttons";
+import { Routes, Route } from "react-router-dom";
+import Pregunta from "./components/Preguntas/Pregunta";
+import Inicio from "./pages/Inicio";
 const App = () => {
   return (
     <>
       <div>
-        <TableAll></TableAll>
-        <Players></Players>
-        <Buttons></Buttons>
+        <Routes>
+          <Route path="/" element={<Inicio />}></Route>
+          <Route path="/pregunta" element={<Pregunta />} />
+        </Routes>
       </div>
     </>
   );
